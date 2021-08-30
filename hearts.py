@@ -39,9 +39,9 @@ class Deck:
             for face in self.faces:
                 self.cards.append(Card(face,suit))
     
-    def __iter__(self):
-        return iter(self.cards)
-    
     def shuffle(self):
-        self.cards = random.shuffle(self.cards)
-                
+        random.shuffle(self.cards)
+        
+    def deal(self):
+        return self.cards.pop(0)
+    
