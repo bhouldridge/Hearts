@@ -43,5 +43,13 @@ class TestDeck(unittest.TestCase):
         self.assertEqual(self.second_card.value, 3)
         self.assertEqual(len(self.deck1.cards), 50)
 
+class TestHand(unittest.TestCase):
+    
+    def setUp(self):
+        self.hand1 = Hand(5)
+        
+    def test_init(self):
+        self.assertEqual(len(self.hand1), 5)
+        
 if __name__=='__main__':
     unittest.main()
